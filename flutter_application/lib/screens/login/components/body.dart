@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application/screens/welcome/components/background.dart';
+import 'package:flutter_application/screens/login/components/background.dart';
 import 'package:flutter_application/constants.dart';
 import 'package:flutter_application/components/roundish_button.dart';
 import 'package:flutter_application/screens/login/login_screen.dart';
+import 'package:flutter_application/components/check_account_field.dart';
+import 'package:flutter_application/components/roundish_passfield.dart';
+import 'package:flutter_application/components/roundish_input.dart';
+
+import 'package:flutter_application/components/text_field_container.dart';
+
 import 'package:flutter_application/screens/signup/signup_screen.dart';
-import 'package:flutter_application/screens/welcome/welcome.dart';
+// import 'package:flutter_application/screens/welcome/welcome.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -18,29 +24,16 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Positioned(
-              child: Image.asset(
-                "assets/images/MeO2.png",
-                height: size.height * 0.2,
-                width: size.width,
-              ),
+            SizedBox(
+              height: size.height * 0.13,
+              width: size.width,
             ),
-            SizedBox(height: size.height * 0.1),
-            RoundedButton(
-              // padding: EdgeInsets.symmetric(vertical: 15, horizontal: 39),
-              // shape: RoundedRectangleBorder(
-              //     borderRadius: BorderRadius.circular(7)),
-              // onPressed: () {},
-              // color: darkgreenaccents,
-              // splashColor: lightblueaccent,
-              // minWidth: 200,
-              // child: Text("About", style: TextStyle(color: lightblueaccent))),
-              text: "About",
-              press: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return WelcomeScreen(); // go to about section
-                }));
-              },
+            RoundedInputField(
+              hintText: "Your Email",
+              onChanged: (value) {},
+            ),
+            RoundedPasswordField(
+              onChanged: (value) {},
             ),
             RoundedButton(
               // padding: EdgeInsets.symmetric(vertical: 15, horizontal: 40),
@@ -52,31 +45,21 @@ class Body extends StatelessWidget {
               // onPressed: () {},
               // child: Text("Login", style: TextStyle(color: lightblueaccent))),
               text: "Login",
+              press: () {},
+            ),
+            SizedBox(height: size.height * 0.03),
+            AlreadyHaveAnAccountCheck(
               press: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return LoginScreen(); // go to about section
-                }));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignUpScreen();
+                    },
+                  ),
+                );
               },
             ),
-            RoundedButton(
-              // padding: EdgeInsets.symmetric(vertical: 15, horizontal: 35),
-              // shape: RoundedRectangleBorder(
-              //     borderRadius: BorderRadius.circular(7)),
-              // color: darkgreenaccents,
-              // minWidth: 200,
-              // splashColor:
-              //     lightblueaccent, // to have a splash effect when button is clicked, uncomment if needed
-
-              // onPressed: () {},
-              // child:
-              //     Text("Signup", style: TextStyle(color: lightblueaccent))),
-              text: "Signup",
-              press: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return WelcomeScreen(); // go to about section
-                }));
-              },
-            )
           ],
         ),
       ),

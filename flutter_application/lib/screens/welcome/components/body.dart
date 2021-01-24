@@ -70,7 +70,7 @@ class Body extends StatelessWidget {
               text: "Signup",
               press: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return WelcomeScreen(); // go to about section
+                  return SignUpScreen(); // go to about section
                 }));
               },
             )
