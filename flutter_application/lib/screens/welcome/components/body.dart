@@ -4,7 +4,7 @@ import 'package:flutter_application/constants.dart';
 import 'package:flutter_application/components/roundish_button.dart';
 import 'package:flutter_application/screens/login/login_screen.dart';
 import 'package:flutter_application/screens/signup/signup_screen.dart';
-import 'package:flutter_application/screens/welcome/welcome.dart';
+import 'package:flutter_application/screens/about/about_screen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -35,7 +35,7 @@ class Body extends StatelessWidget {
               text: "About",
               press: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return WelcomeScreen(); // go to about section
+                  return AboutScreen(); // go to about section
                 }));
               },
             ),
