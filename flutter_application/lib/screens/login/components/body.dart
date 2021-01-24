@@ -7,6 +7,9 @@ import 'package:flutter_application/screens/signup/signup_screen.dart';
 import 'package:flutter_application/screens/welcome/welcome.dart';
 
 class Body extends StatelessWidget {
+  const Body({
+    Key key,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

@@ -59,7 +59,7 @@ class Background extends StatelessWidget {
             bottom: -100,
             right: 0,
             child: Image.asset(
-              "assets/art/treeshack_seedling.png",
+              "assets/art/treeshack_sapling.png",
               width: size.width,
             ),
           ),
