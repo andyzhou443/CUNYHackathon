@@ -23,4 +23,3 @@ def get_carbon(something):
 	want=db['Info'].find_one({'name':something}) # to locate the entry
 
 	return want['carbon'] # get name at said entry
-print(get_carbon("cheese"))
